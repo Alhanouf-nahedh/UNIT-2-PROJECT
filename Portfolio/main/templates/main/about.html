@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<section class="about-section">
+    <div class="about-container">
+        <!-- About Me Text -->
+        <div class="about-text">
+            <h1>About <span class="highlight">me</span></h1>
+            <p>
+                I am a detail-oriented Computer Science graduate with a strong background in creating amazing projects and training in data visualization, system automation, and web development. I have a proven ability to enhance operational efficiency through the development and implementation of customized software solutions.
+            </p>
+        </div>
+
+        <!-- Skills and Focus Areas -->
+        <div class="about-info">
+            <div class="info-card">
+                <div class="icon-container">
+                    <img src="{% static 'main/icons/code-icon.png' %}" alt="Code Icon" class="icon-img">
+                </div>
+                <h3>Tech Skills</h3>
+                <p>HTML | CSS | JavaScript | Python | Java | C | Django | Power BI | SharePoint | InfoPath</p>
+            </div>
+            <div class="info-card">
+                <div class="icon-container">
+                    <img src="{% static 'main/icons/target-icon.png' %}" alt="Target Icon" class="icon-img">
+                </div>
+                <h3>Focus Areas</h3>
+                <p>Web Development, Data Visualization, System Automation, Software Optimization</p>
+            </div>
+            <div class="info-card">
+                <div class="icon-container">
+                    <img src="{% static 'main/icons/quote-icon.png' %}" alt="Quote Icon" class="icon-img">
+                </div>
+                <h3>Motto</h3>
+                <p>"Code with purpose, create with passion."</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

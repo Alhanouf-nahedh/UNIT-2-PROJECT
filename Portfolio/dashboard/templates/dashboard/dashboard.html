@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h2>Welcome to the Admin Dashboard</h2>
+<p>Hello, Admin! You are successfully logged in.</p>
+
+<hr>
+
+<!-- Section for Project Management -->
+<h3>Manage Projects</h3>
+
+<table>
+    <tr>
+        <th>Project Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    {% for project in projects %}
+    <tr>
+        <td>{{ project.name }}</td>
+        <td>{{ project.description }}</td>
+        <td>
+            <a href="{% url 'dashboard:edit_project_view' project.id %}">Edit</a> |
+            <a href="{% url 'dashboard:delete_project_view' project.id %}">Delete</a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">No projects available.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="{% url 'dashboard:add_project_view' %}" class="btn btn-primary">Add New Project</a>
+
+<hr>
+
+<!-- Logout Button -->
+<a href="{% url 'dashboard:logout' %}" class="btn btn-danger">Logout</a>
+{% endblock %}

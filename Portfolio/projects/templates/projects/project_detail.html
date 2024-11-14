@@ -1,0 +1,8 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2>{{ project.title }}</h2>
+<p><strong>Duration:</strong> {{ project.duration }}</p>
+<p>{{ project.description }}</p>
+<p><strong>Created At:</strong> {{ project.created_at }}</p>
+<a href="{% url 'projects/projects_list' %}">Back to Projects List</a>
+{% endblock %}

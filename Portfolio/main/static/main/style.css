@@ -1,0 +1,294 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #222831;
+    color: #EEEEEE;
+    position: relative;
+    
+    height: 100vh; /* Makes the page fit the viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #222831;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #EEEEEE;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #11C5CD;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+    padding: 0 120px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 30px;
+    
+}
+
+
+
+.hero-content h1 .greeting {
+    white-space: nowrap;
+}
+
+.hero-content h1 .name {
+    white-space: nowrap;
+    color: #11C5CD;
+}
+
+.hero-content h1 .name span {
+    color: #11C5CD;
+}
+
+.buttons {
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 32px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.contact-btn {
+    background-color: #11C5CD;
+}
+
+.download-btn {
+    background-color: rgba(57, 62, 70, 0.75);
+    backdrop-filter: blur(2px);
+}
+
+/* Doodles Image */
+.doodles {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    max-width: 500px;
+    
+}
+
+.doodles img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: left;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    
+}
+
+.about-text {
+    align-self: center;
+    
+}
+
+.about-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #11C5CD;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #323443;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 620PX;
+    height: 130PX;
+}
+
+.info-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.info-card p {
+    margin: 5px 0 0;
+}
+
+/* Info Card Styles */
+.info-card {
+    background-color: #323443;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    width: 620px;
+    height: 130px;
+}
+
+/* Icon Container with Background Circle */
+.icon-container {
+    width: 100px; /* Background circle size */
+    height: 100px;
+    background-image: url("/static/main/icons/background-circle.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Icon Inside the Circle */
+.icon-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+
+.icon img {
+    width: 20px;
+    height: 20px; 
+}
+
+/* Works Section */
+.works-section {
+    padding: 40px;
+    background-color: #222831;
+    color: #EEEEEE;
+}
+
+.works-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.works-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #11C5CD;
+}
+
+/* Project Cards */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #323443;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #11C5CD;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+    color: #11C5CD;
+}
+
+.project-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.project-card ul li {
+    margin-bottom: 5px;
+}

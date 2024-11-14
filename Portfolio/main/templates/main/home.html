@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home | Alhanouf Aldhaheri Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>
+            <span class="greeting">hi there, I'm</span><br>
+            <span class="name">ALHANOUF ALDHAHERI</span>
+        </h1>
+        <div class="buttons">
+            <a href="{% url 'main:contact_view' %}" class="btn contact-btn">Contact me</a>
+            <a href="{% static 'main/documents/alhanouf_cv.pdf' %}" download class="btn download-btn">Download CV</a>
+        </div>
+    </div>
+    <div class="doodles">
+        <img src="{% static 'main/images/doodles.png' %}" alt="Doodles">
+    </div>
+</section>
+{% endblock %}
