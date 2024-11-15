@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="dashboard-container">
+    <h2 class="dashboard-title">Manage Messages</h2>
+    <p class="welcome-text">View and manage all received messages.</p>
+
+    <hr class="divider">
+
+    <div class="project-table-container">
+        {% if messages_list %}
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Content</th>
+                    <th>Sent At</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in messages_list %}
+                <tr>
+                    <td>{{ message.name }}</td>
+                    <td>{{ message.email }}</td>
+                    <td>{{ message.content }}</td>
+                    <td>{{ message.sent_at }}</td>
+                    <td>
+                        <form method="post" action="{% url 'dashboard:delete_message_view' message.id %}" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn delete-btn" onclick="return confirm('Are you sure you want to delete this message?');">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p class="no-projects">No messages found.</p>
+        {% endif %}
+    </div>
+
+    <a href="{% url 'dashboard:dashboard_view' %}" class="btn back-btn">Back to Dashboard</a>
+</div>
+{% endblock %}

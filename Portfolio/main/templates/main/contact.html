@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contact-container">
+    <h2 class="contact-title">Contact Us</h2>
+    
+    <form method="post" class="contact-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn submit-btn">Send Message</button>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,15 +1,18 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block content %}
-<h2>Add New Project</h2>
-<form method="post">
-    {% csrf_token %}
-    <label for="name">Project Name:</label>
-    <input type="text" name="name" id="name" required><br>
+<link rel="stylesheet" href="{% static 'main/style.css' %}">
 
-    <label for="description">Description:</label>
-    <textarea name="description" id="description" required></textarea><br>
+<div class="contact-container">
+    <h2 class="contact-title">Add New Project</h2>
+    
+    <form method="post" class="contact-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn submit-btn">Add Project</button>
+    </form>
 
-    <button type="submit" class="btn btn-success">Add Project</button>
-</form>
+    <a href="{% url 'dashboard:dashboard_view' %}" class="btn back-btn">Back to Dashboard</a>
+</div>
 {% endblock %}

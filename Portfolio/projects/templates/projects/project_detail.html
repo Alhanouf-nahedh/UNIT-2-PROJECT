@@ -1,8 +1,11 @@
 {% extends 'main/base.html' %}
 {% block content %}
-<h2>{{ project.title }}</h2>
-<p><strong>Duration:</strong> {{ project.duration }}</p>
-<p>{{ project.description }}</p>
-<p><strong>Created At:</strong> {{ project.created_at }}</p>
-<a href="{% url 'projects/projects_list' %}">Back to Projects List</a>
+<div class="project-card detail-view">
+    <h3>{{ project.title }}</h3>
+    <p><strong>Duration:</strong> {{ project.duration }}</p>
+    <div class="project-description">
+        {{ project.description }}
+    </div>
+    <a href="{% url 'projects:projects_list_view' %}" class="btn back-btn">Back to Projects List</a>
+</div>
 {% endblock %}

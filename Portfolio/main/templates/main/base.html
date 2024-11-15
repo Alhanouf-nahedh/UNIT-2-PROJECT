@@ -20,7 +20,15 @@
             </ul>
         </nav>
     </header>
-
+    {% if messages %}
+        <div class="messages-container">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
     <!-- Main Content Area -->
     <main>
         {% block content %}{% endblock %}

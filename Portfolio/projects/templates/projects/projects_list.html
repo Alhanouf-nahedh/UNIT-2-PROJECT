@@ -1,14 +1,14 @@
 {% extends 'main/base.html' %}
 {% block content %}
-<h2>Projects List</h2>
-<ul>
+<h2 class="dashboard-title">Projects List</h2>
+
+<!-- Container for Projects -->
+<div class="projects-grid">
     {% for project in projects %}
-    <li>
-        <a href="{% url 'project_detail' project.id %}">{{ project.title }}</a> 
-        - {{ project.duration }}
-    </li>
-    {% empty %}
-    <p>No projects available.</p>
+    <div class="project-card">
+        <h3><a href="{% url 'projects:project_detail_view' project.id %}" style="color: #11C5CD;">{{ project.title }}</a></h3>
+        <p>Duration: {{ project.duration }}</p>
+    </div>
     {% endfor %}
-</ul>
+</div>
 {% endblock %}

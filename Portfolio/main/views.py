@@ -1,31 +1,32 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 from .models import Message
-
 from django.contrib import messages
 
-ADMIN_USERNAME = "Alhanouf"
-ADMIN_PASSWORD = "ABC123"
 
-def login_view(request):
-    """View to handle user login."""
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
 
-        if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
-            return redirect('dashboard:dashboard_view')  # Allow access to dashboard
-        else:
-            messages.error(request, 'Invalid username or password')
-    
-    return render(request, 'main/login.html')
 
 
 def home_view(request):
+    """Render the Home page."""
     return render(request, 'main/home.html')
 
 def about_view(request):
+    """Render the About page."""
     return render(request, 'main/about.html')
 
 def contact_view(request):
-    return render(request, 'main/contact.html')
+    """
+    Handle contact form submissions:
+    - Save valid form data and show success message.
+    - Render the contact form for GET requests.
+    """
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for your message!')
+            return redirect('main:contact_view')
+    else:
+        form = ContactForm()
+    return render(request, 'main/contact.html', {'form': form})
