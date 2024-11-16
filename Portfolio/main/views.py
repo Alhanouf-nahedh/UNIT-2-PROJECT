@@ -4,9 +4,6 @@ from .models import Message
 from django.contrib import messages
 
 
-
-
-
 def home_view(request):
     """Render the Home page."""
     return render(request, 'main/home.html')
@@ -19,7 +16,7 @@ def contact_view(request):
     """
     Handle contact form submissions:
     - Save valid form data and show success message.
-    - Render the contact form for GET requests.
+    - Render the contact form.
     """
     if request.method == 'POST':
         form = ContactForm(request.POST)

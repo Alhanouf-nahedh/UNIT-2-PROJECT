@@ -3,12 +3,15 @@
 <h2 class="dashboard-title">Projects List</h2>
 
 <!-- Container for Projects -->
-<div class="projects-grid">
-    {% for project in projects %}
-    <div class="project-card">
-        <h3><a href="{% url 'projects:project_detail_view' project.id %}" style="color: #11C5CD;">{{ project.title }}</a></h3>
-        <p>Duration: {{ project.duration }}</p>
+<div class="projects-list">
+    <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card">
+            <h3><a href="{% url 'projects:project_detail_view' project.id %}" style="color: #11C5CD;">{{ project.title }}</a></h3>
+            <p>Duration: {{ project.duration }}</p>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</div> 
+
 {% endblock %}
