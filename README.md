@@ -35,15 +35,23 @@ A personal website is website that represents you , your work , your career , yo
 - UML (shared as a link or uploaded as a file) - You can use Lucid Charts or similar online UML design tool.
 
 ## (Project Name)
-(project description here.)
+Alhanouf's Portfolio
 
 ## Features List
-- (list of features)
+- Home Page: Introduction and quick navigation to explore the website.
+- About Me Page: Detailed profile, contact information, and skills overview.
+- Projects Page: A showcase of completed projects with titles, durations, descriptions, and links to detailed project pages.
+- Detail Project Page: A dedicated page for each project with in-depth information about the project.
+- Contact Page: A form to collect messages from visitors, with a confirmation message after the contact form is submitted successfully.
+- Dashboard: Admin functionality to view, edit, and delete projects and navigate to the Manage Messages Page.
+- Manage Messages Page: Admin view to manage submitted contact forms and delete messages.
+- Responsive Design: Optimized for both desktop and mobile devices.
+
 
 ## User Stories, Wireframes & UML links
-- (User stories document link here.)
-- (wireframe link here.)
-- (UML link here.)
+- ([User stories document link here.](file:///C:/Users/hnno3/OneDrive/Desktop/%D8%B7%D9%88%D9%8A%D9%82/Project2/User%20Story%20Portfolio%20Project.pdf))
+- ([wireframe link here.](https://www.figma.com/design/1B4Eh2XAQD3XdAzQkGy5qK/Portfolio-Website-Design-(Community)?node-id=0-1&t=sb2bioXRaYH1d1cY-1))
+- ([UML link here.](https://lucid.app/lucidchart/752b6562-9fe1-41bb-92d2-b8b65cea2e13/edit?viewport_loc=-131%2C-98%2C1515%2C928%2C0_0&invitationId=inv_03d82921-be8c-4ee7-bd8a-e485268b73ae))
 
 
 ## Resources:

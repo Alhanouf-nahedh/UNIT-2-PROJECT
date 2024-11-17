@@ -401,6 +401,7 @@ footer {
     transition: background-color 0.3s;
     color: #ffffff;
     text-decoration: none;
+    
 }
 
 .add-btn {
@@ -428,6 +429,8 @@ footer {
     color: white;
     margin-left: 10px;
 }
+
+
 
 .delete-btn:hover {
     background-color: #e53935;
