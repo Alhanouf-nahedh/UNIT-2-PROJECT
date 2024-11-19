@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2f3122;
+    background-color: #222831;
     color: #EEEEEE;
     position: relative;
     height: 100vh;
@@ -51,7 +51,7 @@ body {
     height: 78vh;
     padding: 0 120px;
     position: relative;
-    
+    margin-bottom: 55px;
 }
 
 .hero-content {
@@ -99,7 +99,7 @@ body {
     right: 10%;
     bottom: 0;
     max-width: 500px;
-    z-index: -1; /* Ensures the doodles are behind other elements */
+    z-index: -1;
 }
 
 .doodles img {
@@ -111,8 +111,8 @@ body {
 footer {
     text-align: left;
     padding: 20px 0;
-    margin-top: auto;
     margin-bottom: 0;
+    margin-top: 55px;
 }
 
 .about-section {
@@ -513,6 +513,7 @@ footer {
         flex-direction: column;
         padding: 15px 20px;
     }
+
     .navbar ul {
         display: flex;
         flex-direction: column;
@@ -553,9 +554,9 @@ footer {
     .doodles {
         position: absolute;
         right: 5%;
-        bottom: -100px; /* Adjust the bottom value to push it lower */
-        max-width: 300px; /* Reduce the size of the doodles on smaller screens */
-        z-index: -1; /* Keeps the doodles behind other elements */
+        bottom: -100px; 
+        max-width: 300px;
+        z-index: -1;
     }
 }
 
@@ -580,4 +581,13 @@ footer {
     .project-card {
         width: 100%;
     }
-} 
+
+    .doodles {
+        position: absolute;
+        right: 5%;
+        bottom: -100px; 
+        max-width: 300px;
+        z-index: -1;
+        padding-bottom: 100px;
+    }
+}
