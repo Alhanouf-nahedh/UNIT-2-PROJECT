@@ -505,7 +505,6 @@ footer {
     background-color: #d4edda;
     color: #155724;
 }
-
 /* Responsive Design - Mobile and Tablet */
 @media (max-width: 768px) {
     /* Adjust the navigation for smaller screens */
@@ -517,26 +516,36 @@ footer {
     .navbar ul {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        text-align: center;
     }
 
     .hero {
         flex-direction: column;
         height: auto;
         padding: 20px;
+        margin-bottom: 280px;
     }
 
     .hero-content h1 {
         font-size: 40px;
+        text-align: center;
     }
 
     .buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        align-items: center;
     }
 
     .projects-grid {
         flex-direction: column;
+        gap: 20px;
     }
 
     .about-container {
@@ -545,6 +554,7 @@ footer {
 
     .info-card {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     .project-card {
@@ -554,9 +564,14 @@ footer {
     .doodles {
         position: absolute;
         right: 5%;
-        bottom: -100px; 
+        bottom: -150px; 
         max-width: 300px;
         z-index: -1;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 20px;
     }
 }
 
@@ -568,24 +583,27 @@ footer {
 
     .hero-content h1 {
         font-size: 28px;
+        text-align: center;
     }
 
     .contact-container {
-        padding: 20px;
+        padding: 15px;
     }
 
     .submit-btn {
         font-size: 14px;
+        padding: 10px 15px;
     }
 
     .project-card {
         width: 100%;
+        padding: 10px;
     }
 
     .doodles {
         position: absolute;
         right: 5%;
-        bottom: -100px; 
+        bottom: -170px; 
         max-width: 300px;
         z-index: -1;
         padding-bottom: 100px;
