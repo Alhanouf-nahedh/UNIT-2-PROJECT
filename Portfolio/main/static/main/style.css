@@ -508,6 +508,9 @@ footer {
 /* Responsive Design - Mobile and Tablet */
 @media (max-width: 768px) {
     /* Adjust the navigation for smaller screens */
+    .hero-content {
+        margin-top: 50px; 
+    }
     .navbar {
         flex-direction: column;
         padding: 15px 20px;
@@ -577,6 +580,9 @@ footer {
 
 /* Extra Small Screen (Mobile) */
 @media (max-width: 480px) {
+    .hero-content {
+        margin-top: 50px; 
+    }
     .navbar ul li a {
         font-size: 14px;
     }
