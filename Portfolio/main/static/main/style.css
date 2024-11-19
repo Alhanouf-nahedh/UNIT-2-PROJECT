@@ -98,6 +98,7 @@ body {
     right: 10%;
     bottom: 0;
     max-width: 500px;
+    z-index: -1; /* Ensures the doodles are behind other elements */
 }
 
 .doodles img {
@@ -545,6 +546,14 @@ footer {
 
     .project-card {
         width: 100%;
+    }
+
+    .doodles {
+        position: absolute;
+        right: 5%;
+        bottom: -100px; /* Adjust the bottom value to push it lower */
+        max-width: 300px; /* Reduce the size of the doodles on smaller screens */
+        z-index: -1; /* Keeps the doodles behind other elements */
     }
 }
 
