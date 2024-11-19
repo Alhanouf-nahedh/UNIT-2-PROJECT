@@ -6,3 +6,6 @@ class Message(models.Model):
     email = models.EmailField()
     content = models.TextField()
     sent_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return self.name

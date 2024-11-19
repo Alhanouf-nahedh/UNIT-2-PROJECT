@@ -3,14 +3,20 @@ from dashboard.models import Project
 from main.models import Message
 from dashboard.forms import ProjectForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
 
+def admin_only(user):
+    return user.is_superuser
 
-
+@login_required
+@user_passes_test(admin_only)
 def dashboard_view(request):
     """Dashboard view to list and manage projects."""
     projects = Project.objects.all()
     return render(request, 'dashboard/dashboard.html', {'projects': projects})
 
+@login_required
+@user_passes_test(admin_only)
 def add_project_view(request):
     """View to add a new project."""
     if request.method == 'POST':
@@ -22,7 +28,8 @@ def add_project_view(request):
         form = ProjectForm()
     return render(request, 'dashboard/add_project.html', {'form': form})
 
-
+@login_required
+@user_passes_test(admin_only)
 def edit_project_view(request, project_id):
     """View to edit an existing project."""
     try:
@@ -45,7 +52,8 @@ def edit_project_view(request, project_id):
     return render(request, 'dashboard/edit_project.html', {'form': form, 'project': project})
 
 
-
+@login_required
+@user_passes_test(admin_only)
 def delete_project_view(request, project_id):
     """View to delete a project."""
     try:
@@ -57,7 +65,8 @@ def delete_project_view(request, project_id):
 
     return redirect('dashboard:dashboard_view')
 
-
+@login_required
+@user_passes_test(admin_only)
 def manage_messages_view(request):
     """View to manage messages."""
     messages_list = Message.objects.all().order_by('-sent_at')
